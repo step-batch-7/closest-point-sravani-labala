@@ -13,6 +13,8 @@ Location of organism: [10 94],  Closest food target : [18 76]
 Location of organism: [36 27],  Closest food target : [55 38]
 */
 
+#define FOR_LOOP(start, end) for (int i = start; i < end; i++)
+
 typedef struct
 {
   int x;
