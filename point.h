@@ -13,8 +13,11 @@ Location of organism: [10 94],  Closest food target : [18 76]
 Location of organism: [36 27],  Closest food target : [55 38]
 */
 
+#ifndef __POINT_H_
+#define __POINT_H_
+
 #define FOR_LOOP(start, end) for (int index = start; index < end; index++)
-#define FOOD_LOCATIONS  {{18, 76}, {19, 66}, {89, 57}, {9, 71}, { 55, 38 }}
+#define FOOD_LOCATIONS {{18, 76}, {19, 66}, {89, 57}, {9, 71}, { 55, 38 }}
 #define ORGANISM_LOCATIONS {{18, 86}, {97, 27}, {69, 7}, {10, 94}, { 36, 27 }}
 typedef struct
 {
@@ -24,3 +27,5 @@ typedef struct
 
 double get_distance(Point a, Point b);
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location);
+
+#endif

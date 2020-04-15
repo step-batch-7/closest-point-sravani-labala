@@ -8,11 +8,13 @@ double get_distance(Point a, Point b)
 
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location)
 {
-  double short_distance, distance;
-  FOR_LOOP(0, points_length)
+  double distance;
+  double short_distance = get_distance(current_location, food_points[0]);
+  *closest_food_location = food_points[0];
+  FOR_LOOP(1, points_length)
   {
     distance = get_distance(current_location, food_points[index]);
-    if (distance < short_distance || index == 0)
+    if (distance < short_distance)
     {
       short_distance = distance;
       *closest_food_location = food_points[index];
